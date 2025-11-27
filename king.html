@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NAYEFADM</title>
+<style>
+    body {
+        background: #0a0f17;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .box {
+        background: #111827;
+        padding: 25px;
+        width: 350px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #00f2ff88;
+    }
+    .box h2 {
+        color: #00eaff;
+        margin-bottom: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #00d0ff;
+        border: none;
+        border-radius: 10px;
+        font-size: 17px;
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+    }
+    #msg {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h2>🔐 NAYEFADM</h2>
+    <input id="key" placeholder="Enter your key">
+    <button onclick="check()">CHECK</button>
+    <div id="msg"></div>
+</div>
+
+<script>
+function check() {
+    const key = document.getElementById("key").value;
+    const msg = document.getElementById("msg");
+
+    // এখন লেন্থ 8 থেকে 10 হলেই Successful
+    if(key.length >= 8 && key.length <= 10) { 
+        msg.innerHTML = "✅ Reset Successful!";
+        msg.style.color = "#24ff8a";
+    } else {
+        msg.innerHTML = "❌ Reset Failed!";
+        msg.style.color = "#ff4d4d";
+    }
+}
+</script>
+
+</body>
+</html>
