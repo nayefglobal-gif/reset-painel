@@ -1,2 +1,2 @@
-# reset-panel
-reset-panel
+# reset-painel 
+reset-painel 
